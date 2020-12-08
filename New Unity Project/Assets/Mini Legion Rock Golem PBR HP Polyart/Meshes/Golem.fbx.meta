@@ -179,7 +179,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
+    sortHierarchyByName: 0
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -227,7 +227,7 @@ ModelImporter:
       scale: {x: 0.01, y: 0.01, z: 0.01}
     - name: Hips
       parentName: 
-      position: {x: -9.82902e-33, y: 0.6556418, z: -0.040594358}
+      position: {x: -9.8290194e-33, y: 0.6556418, z: -0.040594358}
       rotation: {x: -0.39858624, y: 0.5840625, z: -0.39858624, w: 0.5840625}
       scale: {x: 0.009999998, y: 0.009999999, z: 0.01}
     - name: Spine
@@ -262,7 +262,7 @@ ModelImporter:
       scale: {x: 0.99999976, y: 1, z: 1}
     - name: Index_Proximal_L
       parentName: 
-      position: {x: -20.710043, y: 2.2913574e-14, z: 3.752453e-15}
+      position: {x: -20.710041, y: 2.2913573e-14, z: 3.752453e-15}
       rotation: {x: -0.0029143794, y: -0.14608686, z: -0.019731868, w: 0.98907065}
       scale: {x: 1.0000002, y: 0.99999994, z: 1.0000001}
     - name: Upper_Arm_R
@@ -272,7 +272,7 @@ ModelImporter:
       scale: {x: 0.9999996, y: 1, z: 0.9999998}
     - name: Lower_Arm_R
       parentName: 
-      position: {x: -48.727665, y: -1.6741749e-14, z: -4.8317195e-15}
+      position: {x: -48.727665, y: -1.6741749e-14, z: -4.831719e-15}
       rotation: {x: 0.000252748, y: -0.0527522, z: 0.0010966779, w: 0.998607}
       scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
     - name: Hand_R
@@ -287,7 +287,7 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
     - name: Upper_Leg_L
       parentName: 
-      position: {x: 4.5822415, y: -7.4905405, z: -18.365622}
+      position: {x: 4.5822415, y: -7.49054, z: -18.365622}
       rotation: {x: 0.039810836, y: -0.28742167, z: 0.91385657, w: 0.28402483}
       scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: Lower_Leg_L
@@ -297,7 +297,7 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
     - name: Foot_L
       parentName: 
-      position: {x: -29.075487, y: 6.0507155e-15, z: 9.992006e-15}
+      position: {x: -29.075485, y: 6.0507155e-15, z: 9.9920055e-15}
       rotation: {x: 0.43606794, y: 0.6766259, z: -0.40200195, w: 0.43636763}
       scale: {x: 0.99999994, y: 1.0000002, z: 0.9999998}
     - name: Toes_L
@@ -307,7 +307,7 @@ ModelImporter:
       scale: {x: 0.9999999, y: 0.9999999, z: 1}
     - name: Upper_Reg_R
       parentName: 
-      position: {x: 4.5820203, y: -7.490456, z: 18.3656}
+      position: {x: 4.5820203, y: -7.4904556, z: 18.3656}
       rotation: {x: -0.039810687, y: 0.28742367, z: 0.913856, w: 0.28402463}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: Lower_Reg_R
