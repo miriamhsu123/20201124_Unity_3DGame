@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    //[Header("aaa")]是在腳本上新增可調整的欄位，名為aaa
     [Header("移動速度"), Range(0, 50)]
     public float speed = 3;
     [Header("停止距離"), Range(0, 50)]
@@ -13,6 +14,8 @@ public class Enemy : MonoBehaviour
     public Transform ATKPoint;
     [Header("攻擊長度"),Range(0f,5f)]
     public float ATKLength;
+    [Header("攻擊力"), Range(0, 500)]
+    public float atk = 30;
 
     private Transform player;
     private NavMeshAgent nav;
@@ -79,16 +82,40 @@ public class Enemy : MonoBehaviour
                 //放在hit前的藍色out = 將資訊儲存於"hit"物件
                 if (Physics.Raycast(ATKPoint.position, ATKPoint.forward, out hit ,ATKLength, 1 << 8))
                 {
-                    hit.collider.GetComponent<Player>().Damage();
+                    hit.collider.GetComponent<Player>().Damage(atk);
                 }
             }
         }
     }
 
-    /// <summary>
-    /// 怪物追角色
-    /// </summary>
-    private void Track()
+    public float hp = 100;
+
+    public void Damage(float damage)
+    {
+        hp -= damage;  //每一次攻擊損失(damage)點hp
+        ani.SetTrigger("受傷觸發");  //受傷時播放"受傷觸發"動畫
+
+        //如果hp小於等於零，則執行Dead事件
+        //可簡寫成  if(hp <= 0) Dead(); 
+        //大括號內只有一件事時可簡寫
+        if (hp <= 0)
+        {
+            Dead();
+        }
+    }
+
+    //創造名叫Dead的事件，內容為觸發"死亡觸發"動畫
+    private void Dead()
+    {
+        nav.isStopped = true;//Dead事件發生後，關閉導覽器
+        this.enabled = false;//Dead事件發生後，將腳本關閉
+        ani.SetBool("死亡開關",true);
+    }
+
+        /// <summary>
+        /// 怪物追角色
+        /// </summary>
+        private void Track()
     {
         //為代理器設定目的地(player的位置)
         nav.SetDestination(player.position);
